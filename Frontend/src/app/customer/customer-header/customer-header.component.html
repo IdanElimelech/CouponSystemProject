@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3077aa;">
+    <a class="navbar-brand" href="#">CouponSystem</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" [ngClass]="{'active': selectedItem == 'coupons'}">
+          <a class="nav-link" (click)="viewCouponsClicked()">Coupons</a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': selectedItem == 'profile'}">
+          <a class="nav-link" (click)="onEditProfileClicked()">Profile</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col2">
+      <p>User : {{customer?.firstName}}</p>
+    </div>
+    <div class="col2">
+      <button class="btn btn-outline-danger" (click)="logoutClicked()"> Logout</button>
+    </div>
+  </nav>

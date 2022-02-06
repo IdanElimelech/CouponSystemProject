@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">CouponSystem</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" [ngClass]="{'active': selectedItem == 'view'}">
+          <a class="nav-link" (click)="viewCouponsClicked()" >View Coupons</a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': selectedItem == 'add'}">
+          <a class="nav-link" (click)="addNewCouponClicked()">Add New Coupon</a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': selectedItem == 'edit'}" >
+          <a class="nav-link" (click)="editProfileClicked()">Edit Profile</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col1">
+      <p>User : {{company?.name}}</p>
+    </div>
+    <div class="col-1">
+      <button class="btn btn-outline-danger" (click)="logoutClicked()"> Logout</button>      
+    </div>
+  </nav>
+
+  
+  

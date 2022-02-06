@@ -1,0 +1,46 @@
+<div class="col">
+    <div class="row">
+        <div class="col-3">
+        </div>
+
+        <div class="col-9">
+            <br>
+            <form (ngSubmit)="submitEditedCompany()" #f="ngForm">
+                <div class="col-5">
+                    <div class="form-control">
+
+                        <label for="title">Name:</label>
+                        <br>
+                        <input type="text" name="name" id="name" class="form-control" [(ngModel)]="company.name"
+                            required #name="ngModel" ngModel>
+
+                        <br>
+
+                        <label for="amount">Email:</label>
+                        <br>
+                        <input type="email" name="email" id="email" class="form-control" [(ngModel)]="company.email"
+                            required #email="ngModel" ngModel>
+
+                        <br>
+
+                        <label for="category">Password:</label>
+                        <br>
+                        <input type="text" name="password" id="pass" class="form-control" required
+                            [(ngModel)]="company.password" #pass="ngModel" ngModel>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-5 btn-group" role="group">
+                                <button class="btn btn-outline-success" type="submit">Save</button>
+                                <button class="btn btn-outline-danger" type="button"
+                                    (click)="onCancelEdit()">Cancel</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

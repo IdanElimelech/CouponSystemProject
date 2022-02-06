@@ -1,0 +1,36 @@
+<h4>filter</h4>
+<ul class="list-group">
+    <form (ngSubmit)="filterCoupons()" #f="ngForm">
+        <li class="list-group-item" (click)="viewMyCouponsClicked()" [ngClass]="{'active': selectedFilter == 'btn0'}">
+            View My Coupons</li>
+        <li class="list-group-item" (click)="filterByCategoryClicked()"
+            [ngClass]="{'active': selectedFilter == 'btn1'}">
+            <label for="category">Category:</label>
+            <br>
+            <input type="number" name="category" id="category" class="form-control" #cat="ngModel" ngModel>
+        </li>
+        <li class="list-group-item" [ngClass]="{'active': selectedFilter == 'btn2'}" (click)="filterByEndDateClicked()">
+            <br>
+            <label for="endDate">Before End Date:</label>
+            <br>
+            <input type="datetime-local" name="endDate" id="endDate" class="form-control" required #end="ngModel" ngModel>
+        </li>
+
+
+        <li class="list-group-item" [ngClass]="{'active': selectedFilter == 'btn3'}" (click)="filterByPriceClicked()">
+            <label for="price">Price Lower than:</label>
+            <br>
+            <input type="number" name="price" id="price" class="form-control" #pr="ngModel" ngModel>
+        </li>
+        <br>
+        <button class="btn btn-outline-success" type="submit">Apply</button>
+    </form>
+    <div *ngIf="errorOccurred" class="card">
+        <div class="card-body text-danger">
+            **{{errorMessage}}**
+        </div>
+      </div>
+</ul>
+
+
+<br>

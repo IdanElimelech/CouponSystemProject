@@ -1,0 +1,53 @@
+
+<div class="col">
+  <app-login-header></app-login-header>
+  <div class="row">
+      <div class="col-3">
+             </div>
+
+      <div class="col-9">
+        <br>
+        <form (ngSubmit)="onLogin()" #f="ngForm">
+            <div class="col-5">
+              <div class="form-control">
+
+                <label for="email">E-Mail:</label>
+                <br>
+                <input type="text" name="email" id="email" class="form-control" ngModel>
+    
+                <br>
+    
+                <label for="password">Password:</label>
+                <br>
+                <input type="text" name="password" id="password" class="form-control" ngModel>
+    
+                <label for="userType">Platform:</label>
+                <div class="form-row align-items-center">
+                  <div class="col-auto my-1">
+                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                    <select class="custom-select mr-sm-2" id="loginType" name="loginType" ngModel>
+                      <option selected>Choose...</option>
+                      <option value=1>Customer</option>
+                      <option value=2>Company</option>
+                      <option value=3>Admin</option>
+                    </select>
+                  </div>
+                </div>
+                <br>
+    
+                <div class="row">
+                  <div class="col-5 btn-group" role="group">
+                    <button class="btn btn-outline-success" type="submit">Log In</button>
+                    <button class="btn btn-outline-danger" type="button" (click)=onCancelClicked()>Cancel</button>
+                  </div>
+                  <h5 class="text-danger" *ngIf="loginFailed">Login Failed - Check your Email/Password</h5>
+                </div>
+    
+              </div>
+            </div>
+        </form>
+
+      </div>
+      
+  </div>
+</div>

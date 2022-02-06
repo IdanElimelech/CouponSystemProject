@@ -1,0 +1,9 @@
+.active{
+    background-color: rgb(159, 187, 240);
+    color: black;
+    font-weight: bolder;
+}
+
+.list-group-item{
+    cursor: pointer;
+}

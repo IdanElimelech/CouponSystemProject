@@ -1,0 +1,29 @@
+<div class="col">
+    <div class="row">
+        <div class="col-7">
+            <h4> Sort By</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <h5 (click)="sortCouponsBySalesAmount()" [ngClass]="{'active': sortType=='sales'}">Sold The Most</h5>
+        </div>
+        <div class="col-3">
+            <h5 (click)="sortCouponsByTitle()" [ngClass]="{'active': sortType=='title'}">Title</h5>
+        </div>
+        <div class="col-3">
+            <h5 (click)="sortCouponsByStartDate()" [ngClass]="{'active': sortType=='start'}">Start Date</h5>
+        </div>
+        <div class="col-3">
+            <h5 (click)="sortCouponsByEndDate()" [ngClass]="{'active': sortType=='end'}">End Date</h5>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col">
+            <app-company-coupon-item *ngFor="let c of coupons" [coupon]="c"></app-company-coupon-item>
+        </div>
+    </div>
+</div>

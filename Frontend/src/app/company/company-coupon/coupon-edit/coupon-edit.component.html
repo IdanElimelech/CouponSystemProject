@@ -1,0 +1,82 @@
+<div class="col">
+  <div class="row">
+    <div class="col-3">
+    </div>
+
+    <div class="col-9">
+      <br>
+      <form (ngSubmit)="submitEditedCoupon()" #f="ngForm">
+        <div class="col-5">
+          <div class="form-control">
+
+            <label for="title">Title:</label>
+            <br>
+            <input type="text" name="title" id="title" class="form-control" [(ngModel)]="coupon.title" required
+              #title="ngModel" ngModel>
+
+            <br>
+
+            <label for="startDate">Start Date:</label>
+            <br>
+            <input type="datetime-local" name="startDate" id="startDate" class="form-control" required
+              [(ngModel)]="coupon.startDate" #start="ngModel" ngModel>
+
+            <br>
+
+            <label for="endDate">End Date:</label>
+            <br>
+            <input type="datetime-local" name="endDate" id="endDate" class="form-control" required
+              [(ngModel)]="coupon.endDate" #end="ngModel" ngModel>
+
+            <br>
+
+            <label for="category">Category:</label>
+            <br>
+            <input type="text" name="category" id="category" class="form-control" required [(ngModel)]="coupon.category"
+              #cat="ngModel" ngModel>
+
+            <br>
+
+            <label for="amount">Amount:</label>
+            <br>
+            <input type="text" name="amount" id="amount" class="form-control" [(ngModel)]="coupon.amount" required
+              #am="ngModel" ngModel>
+
+            <br>
+
+
+            <label for="description">Description:</label>
+            <br>
+            <input type="text" name="description" id="description" class="form-control" [(ngModel)]="coupon.description"
+              required #desc="ngModel" ngModel>
+
+            <br>
+
+
+            <label for="price">Price:</label>
+            <br>
+            <input type="text" name="price" id="price" class="form-control" [(ngModel)]="coupon.price" #pr="ngModel"
+              required ngModel>
+
+            <br>
+
+            <label for="image">Image URL:</label>
+            <br>
+            <input type="text" name="image" id="image" class="form-control" [(ngModel)]="coupon.image" #im="ngModel"
+              required ngModel>
+            <br>
+
+            <div class="row">
+              <div class="col-5 btn-group" role="group">
+                <button class="btn btn-outline-success" type="submit">Save</button>
+                <button class="btn btn-outline-danger" type="button" (click)="onCancelEdit()">Cancel</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

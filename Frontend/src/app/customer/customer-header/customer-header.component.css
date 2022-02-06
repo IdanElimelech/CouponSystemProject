@@ -1,0 +1,7 @@
+.nav-link{
+    cursor: pointer;
+}
+
+.active{
+    font-weight: bolder;
+}

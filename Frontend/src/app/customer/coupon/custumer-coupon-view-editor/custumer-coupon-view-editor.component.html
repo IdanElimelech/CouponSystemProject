@@ -1,0 +1,14 @@
+<br>
+<ul class="list-group">
+    <li class="list-group-item" [ngClass]="{'active': selectedFilter == 'all'}" (click)="viewAllAvailableCoupons()">
+        All Deals
+    </li>
+    <li class="list-group-item" [ngClass]="{'active': selectedFilter == 'owned'}"(click)="viewPurchasedCoupons()">
+        My Coupons
+    </li>
+</ul>
+<div *ngIf="errorOccurred" class="card">
+    <div class="card-body text-danger">
+        **{{errorMessage}}**
+    </div>
+  </div>

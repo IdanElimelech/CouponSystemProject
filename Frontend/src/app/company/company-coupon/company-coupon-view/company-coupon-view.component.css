@@ -1,0 +1,12 @@
+a {
+    cursor: pointer;
+}
+
+h5 {
+    cursor: pointer;
+}
+
+.active {
+    font-weight: bolder;
+    color: blue;
+}

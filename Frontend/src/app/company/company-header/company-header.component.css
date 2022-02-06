@@ -1,0 +1,10 @@
+.active{
+    font-weight: bold;
+}
+
+.nav-item{
+    cursor: pointer;
+}
+.navbar-brand{
+    font-weight: bolder;
+}

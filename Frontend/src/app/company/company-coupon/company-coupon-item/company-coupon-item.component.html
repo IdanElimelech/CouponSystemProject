@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="row card-body">
+                <div class="col-sm-6">
+                    <h5 class="card-title">{{coupon.title}}</h5>
+                    <p class="card-text">{{coupon.description}}</p>
+                    <p class="card-text">Price: {{coupon.price}}$</p>
+                    <p class="card-text">Start Date: {{stringifyDate(coupon.startDate)}}</p>
+                    <p class="card-text" [ngClass]="{'text-danger': couponAboutToExpire}">End Date: {{stringifyDate(coupon.endDate)}}</p>
+                    <p class="card-text" *ngIf="expandDetails">Category: {{coupon.category}}</p>
+                    <p class="card-text" *ngIf="expandDetails">Amount: {{coupon.amount}}</p>
+                    <a class="btn btn-outline-info" (click)="onDetailsClicked()">Details</a>
+                    <a class="btn btn-outline-primary" (click)="onEditCoupon(coupon)">Edit</a>
+                    <a class="btn btn-outline-danger" (click)="onDeleteCoupon()">Delete</a>
+                    <p *ngIf="deleteRequested" class="text-danger"> PRESS AGAIN TO DELETE COUPON</p>
+                </div>
+                <img class="col-sm-6" src="{{coupon.image}}" style="height: 300px;" alt="" />
+            </div>
+        </div>
+    </div>
+    <br>
